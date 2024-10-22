@@ -1,8 +1,8 @@
 package com.seleniumexpresss.Ic.api;
 
 public class UserInfoDTO {
-	private String userName;
-	private String crushName;
+	private String userName="Mr x";
+	private String crushName="Miss y";
 	
 	public UserInfoDTO() {
 		System.out.println("User info dto..");
