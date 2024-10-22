@@ -5,6 +5,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.seleniumexpresss.Ic.api.UserInfoDTO;
+
 @Controller
 public class LCAppController {
     @RequestMapping("/")
@@ -12,12 +14,12 @@ public class LCAppController {
 		return "home-page";
 	}
     @RequestMapping("/process-homepage")
-  	public String showHResultPage(@RequestParam("userName") String userName1,@RequestParam("crushName") String crushName1,Model model) {
-    	System.out.println(userName1);
-    	System.out.println(crushName1);
+  	public String showHResultPage(UserInfoDTO userInfoDTO,Model model) {
+    	System.out.println(userInfoDTO.getUserName());
+    	System.out.println(userInfoDTO.getCrushName());
     	
-    	model.addAttribute("userName", userName1);
-    	model.addAttribute("crushName", crushName1);
+    	model.addAttribute("userInfo",userInfoDTO );
+    	
   		return "result-page";
   	}
 }
