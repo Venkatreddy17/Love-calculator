@@ -7,6 +7,6 @@
 <title>frist mcc app</title>
 </head>
 <body>
-<p>wlcome to selinium express to venkat</p>
+<p>welcome to selinium express to venkat</p>
 </body>
 </html>
