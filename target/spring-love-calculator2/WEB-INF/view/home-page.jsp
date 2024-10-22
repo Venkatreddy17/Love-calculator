@@ -21,7 +21,7 @@
 				<lable for="cn">Crush Name:</lable>
 				<form:input id="cn" path="crushName"/>
 			</p>
-			<input value="calculate">
+			<input type="submit" value="calculate">
 		</div>
 	</form:form>
 </body>
