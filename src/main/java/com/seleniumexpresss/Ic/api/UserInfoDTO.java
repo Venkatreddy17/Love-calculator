@@ -1,8 +1,17 @@
 package com.seleniumexpresss.Ic.api;
 
+import jakarta.validation.constraints.AssertTrue;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
+
 public class UserInfoDTO {
-	private String userName="Mr x";
-	private String crushName="Miss y";
+	@NotBlank(message = "* userName should not blank")
+	@Size(min=3,max=15,message = "userName should be between 3-15 letters" )
+	private String userName;
+	
+	private String crushName ;
+	@AssertTrue(message = "agree for use app")
+	private boolean  termsAndCondition;
 	
 	public UserInfoDTO() {
 		System.out.println("User info dto..");
@@ -22,6 +31,14 @@ public class UserInfoDTO {
 
 	public void setCrushName(String crushName) {
 		this.crushName = crushName;
+	}
+
+	public boolean isTermsAndCondition() {
+		return termsAndCondition;
+	}
+
+	public void setTermsAndCondition(boolean termsAndCondition) {
+		this.termsAndCondition = termsAndCondition;
 	}
 
 	@Override
